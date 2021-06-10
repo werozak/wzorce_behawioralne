@@ -25,7 +25,10 @@ public class Client {
         
        /* Wzorzec Stratega */
         //...
-       
-        System.out.println("Time: ??");
+       long start = System.nanoTime();
+       System.out.println("Time: ??");
+       long end = System.nanoTime();
+       long elapsedTime = end - start; 
+        System.out.println(elapsedTime);
     }
 }
