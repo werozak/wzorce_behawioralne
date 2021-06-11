@@ -9,9 +9,10 @@ package sort.methods;
  *
  * @author LeopardProMK
  */
-public class Quicksort {
+public class Quicksort implements IStrategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
-     private int partition(int arr[], int begin, int end) {
+    @Override
+    public int sort(int arr[], int begin, int end) {
     int pivot = arr[end];
     int i = (begin-1);
 
@@ -34,11 +35,21 @@ public class Quicksort {
     
     public void sortqu(int arr[], int begin, int end) {
     if (begin < end) {
-        int partitionIndex = partition(arr, begin, end);
+        int partitionIndex = sort(arr, begin, end);
 
         sortqu(arr, begin, partitionIndex-1);
         sortqu(arr, partitionIndex+1, end);
     }
 }
     // https://www.baeldung.com/java-quicksort
+
+    @Override
+    public void sort(double[] numbers) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getType() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
