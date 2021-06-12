@@ -7,6 +7,9 @@ package mystrategy;
 
 import data.DataGenerator;
 import sort.methods.Bubblesort;
+import sort.methods.Insertionsort;
+import sort.methods.Quicksort;
+import sort.methods.Selectionsort;
 import sort.strategy.Context;
 
 /**
@@ -33,9 +36,33 @@ public class Client {
        long elapsedTime = end - start; 
         System.out.println(elapsedTime); */
        
-       Context context = new Context(new Bubblesort());
-       context.execute(dataNonSort);
+       Context context1 = new Context(new Bubblesort());
+       long start = System.nanoTime();
+       context1.execute(dataNonSort);
+       long end = System.nanoTime();
+       long elapsedTime = end - start; 
+       System.out.println("Sortowanie bąbelkowe: "+elapsedTime+" ns"); 
        
+       Context context2 = new Context(new Insertionsort());
+       long start1 = System.nanoTime();
+       context1.execute(dataNonSort);
+       long end1 = System.nanoTime();
+       long elapsedTime1 = end1 - start1; 
+       System.out.println("Sortowanie przez wstawianie: "+elapsedTime1+" ns");
+       
+       Context context3 = new Context(new Quicksort());
+       long start3 = System.nanoTime();
+       context3.execute(dataNonSort);
+       long end3 = System.nanoTime();
+       long elapsedTime3 = end3 - start3; 
+       System.out.println("Szybkie sortowanie: "+elapsedTime3+" ns");
+       
+       Context context4 = new Context(new Selectionsort());
+       long start4 = System.nanoTime();
+       context4.execute(dataNonSort);
+       long end4 = System.nanoTime();
+       long elapsedTime4 = end4 - start4; 
+       System.out.println("Sortowanie przez sortowanie: "+elapsedTime4+" ns");
     }
 }
 /*
@@ -58,6 +85,7 @@ za pomocą publicznych  metod.
 4)	Kiedy stosować wzorzec strategii?
 Wzorzec ten sprawdza się w przypadku, gdy w programie występuje dużo wariantów algorytmu 
 i należy uwzględnić możliwość zmiany wariantu w trakcie działania programu. 
+Aby pozbyć się instrukcji warunkowych. 
 
 
 */

@@ -5,8 +5,6 @@
  */
 package sort.methods;
 
-import sun.util.resources.Bundles.Strategy;
-
 /**
  *
  * @author InteXPC
