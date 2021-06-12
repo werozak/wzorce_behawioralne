@@ -18,7 +18,7 @@ public class Context {
         this.strategy = strategy;
     }
     
-    public void execute(double []numbers){
+    public void execute(double [] numbers){
         strategy.sort(numbers);
     }
     

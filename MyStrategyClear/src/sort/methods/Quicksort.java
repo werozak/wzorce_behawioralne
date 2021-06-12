@@ -11,7 +11,7 @@ package sort.methods;
  */
 public class Quicksort implements IStrategy{
     /* http://www.algorytm.org/algorytmy-sortowania/sortowanie-szybkie-quicksort/quick-j.html */
-    @Override
+   // @Override
     public int sort(int arr[], int begin, int end) {
     int pivot = arr[end];
     int i = (begin-1);
@@ -45,11 +45,13 @@ public class Quicksort implements IStrategy{
 
     @Override
     public void sort(double[] numbers) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     @Override
     public String getType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return null;
+        
     }
 }
